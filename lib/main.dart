@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:food_flutter/providers/collect_provider.dart';
 import 'package:food_flutter/providers/meal_provider.dart';
 import 'package:food_flutter/router/router.dart';
 import 'package:food_flutter/shared/app_theme.dart';
@@ -7,7 +8,10 @@ import 'package:provider/provider.dart';
 
 void main() {
   runApp(MultiProvider(
-    providers: [ChangeNotifierProvider(create: (_) => MealProvider())],
+    providers: [
+      ChangeNotifierProvider(create: (_) => MealProvider()),
+      ChangeNotifierProvider(create: (_) => CollectProvider()),
+    ],
     child: const MyApp(),
   ));
 }

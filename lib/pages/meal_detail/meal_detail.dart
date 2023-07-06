@@ -17,7 +17,7 @@ class MyMealDetailPage extends StatelessWidget {
       body: MealDetailContent(meal),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        child: Icon(Icons.favorite_border),
+        child: const Icon(Icons.favorite_border),
       ),
     );
   }

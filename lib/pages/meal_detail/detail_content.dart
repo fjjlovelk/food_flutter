@@ -25,7 +25,10 @@ class MealDetailContent extends StatelessWidget {
 
   // 图片
   Widget _buildBannerImage() {
-    return Image.network(_meal.imageUrl ?? '');
+    return Image.network(
+      _meal.imageUrl ?? '',
+      width: double.infinity,
+    );
   }
 
   // 制作材料
